@@ -1,0 +1,16 @@
+.nav-item {
+    font-size: 1.2rem;
+}
+.btn {
+    font-size: 1.2rem;
+}
+.lead {
+   font-weight: normal;
+   font-size: 1.5rem;
+}
+#welcome img {
+    width: 40rem;
+}
+#contact p {
+    font-size: 1.6rem;
+}
