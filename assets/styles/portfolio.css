@@ -1,0 +1,126 @@
+/* Reset some basic elements for consistency */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Lighter text */
+}
+
+header {
+    text-align: center;
+    padding: 15px;
+}
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    width: 500px;
+    margin: 0 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1); /* Lighter shadow for dark mode */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1e1e1e; /* Slightly lighter project background */
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255,255,255,0.15); /* Adjusted for dark mode */
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-details {
+    display: none; /* These are hidden and shown in the popup */
+}
+
+.detail-img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #282828; /* Darker popup background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2); /* Lighter shadow for dark mode */
+    z-index: 1000;
+    width: 90%;
+    max-width: 600px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    color: #e0e0e0; /* Ensure popup text is also light */
+}
+
+/* When popup is not hidden, adjust visibility and opacity */
+#popup:not(.hidden) {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.hidden {
+    display: none;
+}
+
+#close-popup {
+    cursor: pointer;
+    padding: 6px 12px;
+    background-color: #ff0000; /* Darker button */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#close-popup:hover {
+    background-color: #444; /* Slightly lighter on hover */
+}
+
+.goto-github {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 8px 12px;
+    background-color: #ffffff; /* Darker button */
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.goto-github:hover {
+    background-color: #666; /* Slightly lighter on hover */
+}
+
+/* Responsive adjustments can be added here */
+@media (max-width: 768px) {
+    #popup {
+        width: 95%;
+    }
+}

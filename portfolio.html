@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="/assets/styles/portfolio.css" />
+  </head>
+  <body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <div id="projects-grid">
+      <div class="project" data-github="https://github.com/yourproject1">
+        <img src="/assets/img/expense_tracker_thumbnail.png" alt="Project 1" />
+        <div class="project-details">
+          <h2>Expense Tracker App</h2>
+          <p>Minimalistic App for tracking your expenses by categories.</p>
+          <img
+            src="/assets/img/expense_tracker_detail.png"
+            alt="Detailed view 1"
+            class="detail-img"
+          />
+
+          <!-- GitHub icon and link -->
+          <a
+            href="https://github.com/alejopadido/flutter-apps/tree/main/expense_tracker"
+            target="_blank"
+            class="goto-github"
+          >
+            <img
+              src="/assets/img/github_icon.png"
+              alt="GitHub"
+              style="width: 30px; height: 30px; margin-right: 8px"
+            />
+            View on GitHub
+          </a>
+        </div>
+      </div>
+      <!-- Repeat for other projects -->
+    </div>
+
+    <div id="popup" class="hidden">
+      <div id="popup-content"></div>
+      <button id="close-popup">Close</button>
+    </div>
+
+    <script src="/assets/js/portfolio.js"></script>
+  </body>
+</html>
