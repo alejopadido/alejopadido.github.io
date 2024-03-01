@@ -120,6 +120,11 @@ header {
 
 /* Responsive adjustments can be added here */
 @media (max-width: 768px) {
+    .project {
+        width: calc(100% - 20px); /* Adjust the width to fit the screen with some margin */
+        margin-right: 0; /* Remove right margin on mobile */
+    }
+
     #popup {
         width: 95%;
     }
